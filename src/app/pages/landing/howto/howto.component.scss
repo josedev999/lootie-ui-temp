@@ -1,0 +1,27 @@
+:host{
+  @apply block p-[10px] bg-gray-800 overflow-hidden
+}
+
+.item{
+  @apply flex flex-col items-center w-[250px] h-[200px] py-[10px]
+}
+
+.item span {
+  @apply my-[10px]
+}
+
+.item p {
+  @apply text-center
+}
+
+.icon{
+  @apply w-[58px]
+}
+
+.dots{
+  @apply flex justify-between absolute top-[40px] px-[220px] w-full
+}
+
+.dots > div {
+  @apply h-[4px] w-[230px] bg-[url('/assets/images/dotted.svg')] bg-repeat
+}

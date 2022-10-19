@@ -1,0 +1,110 @@
+//@import "src/styles/partials/index";
+//@import "src/styles/concepts.scss";
+//@import "src/styles/variables.scss";
+
+//@include register-component {
+//
+//  .desktop {
+//    .light-theme-icon {
+//      background-image: from-theme(header-light-theme-icon);
+//    }
+//
+//    .dark-theme-icon {
+//      background-image: from-theme(header-dark-theme-icon);
+//    }
+//  }
+//
+//  .mobile {
+//    .light, .dark {
+//      background: from-theme(mobile-logoff-theme-icon-color);
+//
+//      &.checked {
+//        background: from-theme(mobile-logoff-theme-icon-checked-color);
+//      }
+//    }
+//
+//    svg {
+//      display: block;
+//    }
+//
+//    .moon-stroke {
+//      stroke: from-theme(theme-switch-moon)
+//    }
+//
+//    .sun-stroke {
+//      stroke: from-theme(theme-switch-sun)
+//    }
+//  }
+//}
+//
+//.mobile {
+//  display: flex;
+//  border-radius: 15px;
+//  overflow: hidden;
+//  cursor: pointer;
+//
+//  .light-theme-icon, .dark-theme-icon {
+//    display: flex;
+//    position: relative;
+//    width: 14px;
+//    height: 14px;
+//    background-repeat: no-repeat;
+//  }
+//
+//  .light-theme-icon {
+//    margin-left: 2px;
+//  }
+//
+//  .dark-theme-icon {
+//    margin-right: 3px;
+//  }
+//
+//  .light, .dark {
+//    display: flex;
+//    position: relative;
+//    width: 35px;
+//    height: 30px;
+//    align-items: center;
+//    justify-content: center;
+//
+//    &:after {
+//      position: absolute;
+//      content: '';
+//      top: 0;
+//      left: 0;
+//      bottom: 0;
+//      right: 0;
+//      opacity: 0;
+//    }
+//
+//    &.checked:after {
+//      background-color: #fff;
+//    }
+//
+//    &:after {
+//      background-color: #000;
+//    }
+//
+//    &:hover:after {
+//      opacity: 0.04;
+//    }
+//  }
+//}
+//
+//.desktop {
+//  display: flex;
+//  align-items: center;
+//  margin-left: 10px;
+//  cursor: pointer;
+//
+//  .light {
+//    margin-right: 10px;
+//  }
+//
+//  .light-theme-icon,
+//  .dark-theme-icon {
+//    height: 12px;
+//    width: 12px;
+//    font-size: 14px;
+//  }
+//}

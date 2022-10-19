@@ -1,0 +1,26 @@
+:host{
+  @apply flex flex-col h-full;
+}
+
+.top-menu{
+  @apply relative inline-flex items-center h-[35px] pl-[10px] pr-[60px] bg-black-800 text-gray-100 text-[13px]
+    before:content-[''] before:w-0 before:h-0 before:border-b-[35px] before:border-l-[35px] before:absolute before:right-0 before:top-0
+    before:border-b-black-900 before:border-l-transparent
+}
+
+.top-menu-item{
+  @apply flex items-center mr-[30px] cursor-pointer whitespace-nowrap
+    hover:bg-orange-text-gradient hover:bg-clip-text hover:[-webkit-text-fill-color:transparent]
+}
+
+.nav-item{
+  @apply flex items-center pl-[10px] pr-[10px] ml-[10px] cursor-pointer
+}
+
+.nav-item-icon{
+  @apply w-[20px] h-[20px] mr-[10px] bg-no-repeat bg-center
+}
+
+.nav-item-text{
+  @apply group-hover:bg-orange-text-gradient bg-clip-text group-hover:[-webkit-text-fill-color:transparent]
+}

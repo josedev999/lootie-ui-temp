@@ -1,0 +1,142 @@
+<!-- BG -->
+<div class="fixed inset-0 bg-main bg-[length:115%] bg-center"></div>
+
+
+<!-- HEADER -->
+<div class="fixed top-0 inset-x-0 flex items-center h-[100px] z-10 bg-black-900 shadow-header">
+  <div class="w-[80px] h-[81px] ml-[29px] mr-[20px] shrink-0"><img alt="logo" src="/assets/images/icons/new-logo.webp" width="80" height="81"></div>
+  <div class="flex flex-col grow self-stretch">
+    <div class="flex">
+      <div class="top-menu">
+        <a class="top-menu-item" href="/probably-fair/unboxing">Provably Fair</a>
+        <a class="top-menu-item" href="/affiliates">Referrals</a>
+        <a class="top-menu-item" href="/support">FAQ</a>
+        <a class="top-menu-item" href="/authentication">Authentication</a>
+        <a class="top-menu-item" href="/topup">
+          <div
+            class="w-[15px] h-[15px] mr-[5px] bg-[url(/assets/images/icons/info-with-circle.svg)] bg-no-repeat text-inherit"></div>
+          How it works
+        </a>
+        <a class="top-menu-item text-yellow-300 group hover:text-white" href="/mysterybox/free">
+          <div class="w-[15px] h-[15px] mr-[5px] bg-[url(/assets/images/icons/gift.svg)] text-inherit"></div>
+          Free box
+        </a>
+
+        <app-theme-switch></app-theme-switch>
+      </div>
+    </div>
+    <div class="flex grow items-center ">
+      <nav class="flex shrink-0 text-gray-100">
+        <a class="nav-item group" href="/mysteryboxes">
+          <span
+            class="nav-item-icon bg-[url(/assets/images/header/box.svg)] group-hover:bg-[url(/assets/images/header/Box_fill_hover.svg)]"></span>
+          <span
+            class="nav-item-text">MYSTERY BOXES</span>
+        </a>
+        <a class="nav-item group" href="/unboxing">
+          <span
+            class="nav-item-icon bg-[url(/assets/images/header/photocamera.svg)] group-hover:bg-[url(/assets/images/header/Unbox_fill_hover.svg)]"></span>
+          <span class="nav-item-text">UNBOXING</span>
+        </a>
+        <a class="nav-item group" href="/partnership">
+          <span
+            class="nav-item-icon bg-[url(/assets/images/header/handshake.svg)] group-hover:bg-[url(/assets/images/header/Partners_fill_hover.svg)]"></span>
+          <span class="nav-item-text">PARTNERSHIP</span>
+        </a>
+      </nav>
+      <button class="btn-secondary h-[32px] ml-auto mr-[10px]"><span class="text-orange-gradient">GIVEAWAY</span>
+      </button>
+      <!--      <div class="h-[44px] p-[6px] border border-gray-800"> TEST DDDD</div>-->
+    </div>
+  </div>
+
+
+  <!--- LOGIN / ACCOUNT -->
+  <div class="flex items-center justify-center self-stretch shrink-0 bg-black-800 w-[90px] text-[13px] cursor-pointer">
+    <img alt="logout" class="mr-[10px] w-[23px] h-[23px]" src="/assets/images/icons/user-logout.svg">
+    Login
+  </div>
+  <!-- END -->
+</div>
+
+<div class="relative grow pt-[100px] z-0">
+  <main class="min-h-full pb-[300px] max-w-[1115px] mx-auto overflow-hidden">
+
+
+    <!-- APP SUMMARY -->
+    <div class="mt-[25px]">
+      <app-summary></app-summary>
+    </div>
+
+
+    <!-- TOP BANNER -->
+    <div class="bg-[url(/assets/images/top_banner_1120.webp)] w-[1114px] h-[250px] mt-[17px] mx-auto p-[30px]">
+
+      <h1 class="text-[45px] font-[900] h-[70px] drop-shadow-lg">
+        {{ "LANDING_PAGE.PAGE_TITLE" | translate }}
+      </h1>
+
+      <p class="text-[19px] w-[540px] mt-[10px] h-[60px] font-[400] drop-shadow-lg">
+        {{ "LANDING_PAGE.PAGE_SUB_TITLE" | translate }}
+      </p>
+
+      <div class="mt-[20px] h-[45px]">
+        <button class="btn-primary mr-[35px]">
+          {{ "CASES.GET_STARTED" | translate }}
+        </button>
+        <button class="btn-primary" [routerLink]="['/how-it-works/topup']">
+          {{ "CASES.HOW_IT_WORKS" | translate }}
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-[25px] bg-[url(/assets/images/title-bg-1120.svg)] bg-no-repeat bg-center">
+      <div class="flex items-center justify-center text-[22px] font-[900] h-[40px]">{{ "CASES.CASES_GROUP_TITLE.RECENT_UNBOXES" | translate }}</div>
+    </div>
+
+    <app-recent-unboxes></app-recent-unboxes>
+
+    <div class="mt-[25px] bg-[url(/assets/images/title-bg-1120.svg)] bg-no-repeat bg-center">
+      <div class="flex items-center justify-center text-[22px] font-[900] h-[40px]">{{ "CASES.CASES_GROUP_TITLE.HOW_IT_WORKS" | translate }}</div>
+    </div>
+
+    <app-howto></app-howto>
+
+    <div class="mt-[25px] bg-[url(/assets/images/title-bg-1120.svg)] bg-no-repeat bg-center">
+      <div class="flex items-center justify-center text-[22px] font-[900] h-[40px]">{{ "CASES.CASES_GROUP_TITLE.UNBOX_RECEIVE" | translate }}</div>
+    </div>
+
+
+    <div class="grid grid-cols-[repeat(auto-fill,_180px)] justify-between">
+<!--    <div class="flex flex-wrap overflow-hidden">-->
+      <ng-container *ngIf="loading$ | push">
+        <div *ngFor="let placeholder of placeholders" class="flex flex-col items-center w-[180px] h-[218px] m-[5px] p-[10px] shrink-0 bg-gray-800">
+        </div>
+      </ng-container>
+      <div *ngFor="let box of cases$ | push" class="flex flex-col items-center w-[180px] h-[218px] m-[5px] p-[10px] shrink-0 bg-gray-800">
+        <img [alt]="box.name" [src]="box.image | fullUrl: 'images':'caseImage':180" class="object-contain w-[180px] h-[125px]" loading="lazy">
+        <div class="mt-[5px] overflow-hidden overflow-ellipsis whitespace-nowrap">{{box.name}}</div>
+        <div class="flex items-center w-full mt-[15px] h-[32px] px-[3px] rounded-[2px] text-black" [style.backgroundColor]="box.color">
+          <span class="grow ml-[10px]">UNBOX</span>
+          <span class="px-[13px] bg-white rounded-[5px]">${{box.price | number : '1.2-2'}}</span>
+        </div>
+      </div>
+
+    </div>
+
+    <app-footer-banner class="my-[44px]"></app-footer-banner>
+    <app-footer class="absolute bottom-0 inset-x-0"></app-footer>
+  </main>
+</div>
+
+
+
+<!-- HR -->
+
+<!-- NAV -->
+
+
+<!-- CASES -->
+
+
+<!--<router-outlet></router-outlet>-->

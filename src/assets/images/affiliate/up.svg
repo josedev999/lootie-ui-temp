@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="172" height="88" fill="none" viewBox="0 0 172 88">
+    <path stroke="url(#paint0_linear)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 49.954l20.426 20.508L61.62 30.108l40.194 40.354 68.527-68.8"/>
+    <path stroke="#FFC520" stroke-linecap="round" stroke-width="2" d="M163.093 1H171v7.938"/>
+    <path stroke="#FFC520" stroke-linecap="round" stroke-width="1.5" d="M136.737 59.215v-7.938M140.69 55.246h-7.907"/>
+    <path stroke="#FFE9AB" stroke-linecap="round" stroke-width="1.5" d="M95.884 47.308v-7.939M99.838 43.338H91.93"/>
+    <path stroke="#FFC520" stroke-linecap="round" stroke-width="2" d="M136.737 19.523v-7.938M140.69 15.554h-7.907"/>
+    <path stroke="#FFE9AB" stroke-linecap="round" stroke-width="1.5" d="M87.977 81.707V73.77M91.93 77.738h-7.907"/>
+    <path stroke="#FFE18C" stroke-linecap="round" stroke-width="1.5" d="M52.396 63.185v-7.939M56.349 59.215h-7.907"/>
+    <path stroke="#FFF0C3" stroke-linecap="round" d="M15.496 43.338V35.4M19.45 39.37h-7.907M37.9 87V79.06M41.853 83.03h-7.907"/>
+    <defs>
+        <linearGradient id="paint0_linear" x1="169.682" x2=".902" y1="2.323" y2="49.604" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FFC520"/>
+            <stop offset="1" stop-color="#FFC520" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+</svg>

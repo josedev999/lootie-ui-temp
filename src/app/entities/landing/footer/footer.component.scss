@@ -1,0 +1,28 @@
+:host {
+  @apply h-[300px] px-[60px] bg-black-900
+}
+
+.column {
+  @apply h-[200px] max-w-[170px];
+}
+
+.title {
+  @apply mb-[10px] font-black text-[12px] tracking-[0.6px] text-white
+}
+
+.item {
+  @apply flex items-center h-[30px]
+}
+
+.item span {
+  @apply w-[13px] h-[13px] mr-[5px]
+}
+
+.payment-options {
+  @apply flex flex-wrap
+}
+
+.payment-options a {
+  @apply m-[10px]
+}
+

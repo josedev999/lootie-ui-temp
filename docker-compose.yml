@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  server:
+    container_name: lootie-ui
+    image: lootie-ui:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+
+    restart: on-failure
+    ports:
+      - 7777:7777
+      - 80:80
+
